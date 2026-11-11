@@ -23,14 +23,13 @@
 		</div>
 
 		<div class="about-image-col">
-			<div class="foto-wrapper">
+			<div class="foto-card">
 				<img
 					src="{base}/image/profile.jpeg"
 					alt="David Yehuda Surbakti - Fullstack Developer"
 					class="foto-asli"
 					loading="eager"
 				/>
-				<div class="foto-ring"></div>
 			</div>
 		</div>
 	</div>
@@ -91,48 +90,29 @@
 		align-items: center;
 	}
 
-	.foto-wrapper {
-		position: relative;
-		width: clamp(200px, 22vw, 300px);
-		height: clamp(200px, 22vw, 300px);
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	.foto-card {
+		width: clamp(230px, 22vw, 310px);
+		aspect-ratio: 3 / 4;
+		border-radius: 18px;
+		overflow: hidden;
+		background-color: var(--bg-surface);
+		border: 1px solid var(--color-border);
+		box-shadow: 0 20px 45px rgba(55, 70, 208, 0.12);
+		transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color var(--transition-fast);
+	}
+
+	.foto-card:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 25px 55px rgba(55, 70, 208, 0.22);
+		border-color: var(--color-primary);
 	}
 
 	.foto-asli {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: center 62%;
-		border-radius: 50%;
-		border: 4px solid var(--color-primary);
-		box-shadow: 0 16px 40px rgba(55, 70, 208, 0.22);
-		z-index: 2;
-		transition: transform 0.4s ease, box-shadow 0.4s ease;
-	}
-
-	.foto-wrapper:hover .foto-asli {
-		transform: scale(1.03);
-		box-shadow: 0 20px 50px rgba(55, 70, 208, 0.32);
-	}
-
-	.foto-ring {
-		position: absolute;
-		inset: -12px;
-		border: 1.5px dashed rgba(55, 70, 208, 0.45);
-		border-radius: 50%;
-		z-index: 1;
-		animation: spinSlow 30s linear infinite;
-	}
-
-	@keyframes spinSlow {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
+		object-position: center 55%;
+		display: block;
 	}
 
 	@media (max-width: 860px) {
@@ -147,9 +127,8 @@
 			order: -1;
 		}
 
-		.foto-wrapper {
-			width: 180px;
-			height: 180px;
+		.foto-card {
+			width: 200px;
 		}
 	}
 </style>

@@ -1,30 +1,46 @@
 # Portfolio - David Yehuda Surbakti
 
-Personal static portfolio website built with HTML5, modern CSS, and vanilla JavaScript.
+Personal portfolio website re-architected with **Svelte 5** and **SvelteKit 2**, exported to prerendered static HTML via `@sveltejs/adapter-static` for GitHub Pages.
 
-## Architecture
+## Architecture & Tech Stack
 
-- `common.css`: Shared global design tokens (`:root`), base reset, sticky footer layout, stable scrollbar gutter (`scrollbar-gutter: stable`), and pixel-locked responsive navigation bar.
-- `index.html` / `home.css`: Minimalist landing page with responsive fluid typography (`clamp()`) serving as the GitHub Pages root entry point.
-- `about.html` / `about.css`: Single-screen 2-column layout (story narrative on left, circular profile image on right) fitted to 100vh with zero desktop scroll.
-- `portofolio.html` / `portofolio.css` / `portofolio.js`: Live project showcase displaying Bagimu Extra (Eskul Management System) and E-Voting Platform SMK Bagimu Negeriku, with direct URLs and interactive lightbox modal.
-- `contact.html` / `contact.css`: Minimalist contact channels (Instagram, WhatsApp, and Gmail: `david75bekasi@gmail.com`) with floating SVG icons and structured persona chips, fitted to single-screen viewport.
-- `image/`: Profile photo (`profile.jpeg`) and live application screenshots (`eskul.png`, `evoting.png`).
+- **Framework**: SvelteKit 2 (`@sveltejs/kit`) with Svelte 5 Runes (`$state`, `$props`).
+- **Adapter**: `@sveltejs/adapter-static` generating 100% prerendered static assets into `build/`.
+- **Components**:
+  - `src/lib/components/SplashScreen.svelte`: High-impact kinetic preloader with non-linear `00`-`100%` counter and split-curtain reveal.
+  - `src/lib/components/Navbar.svelte`: Unified pixel-locked navigation with dynamic active states.
+  - `src/lib/components/Footer.svelte`: Sticky bottom footer (*don't be shy*).
+- **Routes**:
+  - `src/routes/+page.svelte`: Hero landing page with fluid typography.
+  - `src/routes/about/+page.svelte`: Narrative story and circular profile portrait.
+  - `src/routes/portfolio/+page.svelte`: Live production project showcase with interactive modal lightbox.
+  - `src/routes/contact/+page.svelte`: Contact channels (Instagram, WhatsApp, Gmail).
+- **Deployment**: Automated via GitHub Actions workflow (`.github/workflows/static.yml`).
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Production Build
+
+```bash
+npm run build
+npm run preview
+```
 
 ## Color Palette
 
 - Primary Accent: `#3746D0` (Royal Blue)
-- Primary Dark: `#26339E`
+- Primary Dark: `#26339E` / Deep Curtain `#1C246B`
 - Background Base: `#F5F1EA` (Warm Beige)
 - Card Surface: `#FFFFFF`
 - Footer Tone: `#E6E1D7` (Harmonized Warm Neutral)
 
 ## Typography
 
-- Headings & Display: `Bricolage Grotesque` (Weights 600, 700, 800)
-- Body Text: `Hanken Grotesk` (Weights 400, 500, 600, 700)
-- Technical Badges & Metrics: `Space Grotesk` (Weights 500, 600, 700)
-
-## Browser Support
-
-Targeted for standard modern evergreen browsers supporting CSS Grid, Flexbox, CSS Custom Properties, and IntersectionObserver.
+- Headings & Display: `Bricolage Grotesque`
+- Body Text: `Hanken Grotesk`
+- Technical Badges & Counter: `Space Grotesk`

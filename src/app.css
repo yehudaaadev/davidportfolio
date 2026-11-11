@@ -1,0 +1,49 @@
+:root {
+	--bg-primary: #F5F1EA;
+	--bg-surface: #FFFFFF;
+	--bg-footer: #E6E1D7;
+	--color-primary: #3746D0;
+	--color-primary-dark: #26339E;
+	--color-text-muted: #5362DE;
+	--color-border: rgba(55, 70, 208, 0.2);
+	--color-border-hover: rgba(55, 70, 208, 0.5);
+	--font-heading: 'Bricolage Grotesque', -apple-system, sans-serif;
+	--font-body: 'Hanken Grotesk', -apple-system, sans-serif;
+	--font-tech: 'Space Grotesk', sans-serif;
+	--font-sans: var(--font-body);
+	--font-serif: var(--font-heading);
+	--transition-fast: 0.2s ease;
+	--transition-base: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	scrollbar-gutter: stable;
+}
+
+body {
+	font-family: var(--font-body);
+	background-color: var(--bg-primary);
+	color: var(--color-primary);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4,
+.font-heading {
+	font-family: var(--font-heading);
+	letter-spacing: -0.5px;
+}
+
+.font-tech {
+	font-family: var(--font-tech);
+}

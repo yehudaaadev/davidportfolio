@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - David Yehuda Surbakti</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="portofolio.css">
+</head>
+<body class="portfolio-page">
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portofolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="kartu">
+        <div class="tulisan-tengah">
+            <h1 class="pertama">My Projects</h1>
+            <p class="portfolio-subtitle">A collection of my work and real-world web applications</p>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card visible" data-category="web">
+                <div class="project-image">
+                    <img src="image/eskul.png" alt="Bagimu Extra Extracurricular Management Website">
+                    <div class="project-overlay">
+                        <button class="overlay-btn" type="button">View Details</button>
+                    </div>
+                </div>
+                <div class="project-url-bar">
+                    <a href="https://bagimuextra.smkbagimunegeriku.sch.id/" target="_blank" rel="noopener noreferrer" class="project-external-url" title="Open Bagimu Extra website">
+                        <span>https://bagimuextra.smkbagimunegeriku.sch.id/</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+                <div class="project-info">
+                    <div class="project-number">PROJECT 01</div>
+                    <h2 class="project-title">Extracurricular Management System (Bagimu Extra)</h2>
+                    <p class="project-description">An integrated information and management system for school extracurricular activities at SMK Bagimu Negeriku. Features online student registration, digital QR-based attendance tracking, grade recapitulation, activity reporting, and automated WhatsApp notifications.</p>
+                    <div class="project-tags">
+                        <span class="tag">Web Application</span>
+                        <span class="tag">School Management</span>
+                        <span class="tag">Live Production</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card visible" data-category="web">
+                <div class="project-image">
+                    <img src="image/evoting.png" alt="E-Voting Platform SMK Bagimu Negeriku">
+                    <div class="project-overlay">
+                        <button class="overlay-btn" type="button">View Details</button>
+                    </div>
+                </div>
+                <div class="project-url-bar">
+                    <a href="https://evoting.smkbagimunegeriku.sch.id/" target="_blank" rel="noopener noreferrer" class="project-external-url" title="Open E-Voting website">
+                        <span>https://evoting.smkbagimunegeriku.sch.id/</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+                <div class="project-info">
+                    <div class="project-number">PROJECT 02</div>
+                    <h2 class="project-title">E-Voting Platform SMK Bagimu Negeriku</h2>
+                    <p class="project-description">A secure electronic voting platform designed for student council and school organization elections. Built for transparency, accuracy, and real-time auditability, featuring automated voter token generation, live debate controls, audit logging, and WhatsApp gateway integration.</p>
+                    <div class="project-tags">
+                        <span class="tag">E-Voting System</span>
+                        <span class="tag">Security &amp; Audit</span>
+                        <span class="tag">Live Production</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project details view">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close dialog">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous project">&#8592;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next project">&#8594;</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            <div class="lightbox-info">
+                <h2 class="lightbox-title" id="lightbox-title"></h2>
+                <div class="lightbox-url" id="lightbox-url"></div>
+                <p class="lightbox-description" id="lightbox-description"></p>
+                <div class="lightbox-tags" id="lightbox-tags"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top of page">&#8593;</button>
+
+    <footer class="bawah">
+        <p class="kata-kata">don't be shy</p>
+    </footer>
+
+    <script src="portofolio.js"></script>
+</body>
+</html>

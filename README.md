@@ -5,7 +5,7 @@ Personal static portfolio website built with HTML5, modern CSS, and vanilla Java
 ## Architecture
 
 - `common.css`: Shared global design tokens (`:root`), base reset, sticky footer layout, stable scrollbar gutter (`scrollbar-gutter: stable`), and pixel-locked responsive navigation bar.
-- `home.html` / `home.css`: Minimalist landing page with responsive fluid typography (`clamp()`).
+- `index.html` / `home.css`: Minimalist landing page with responsive fluid typography (`clamp()`) serving as the GitHub Pages root entry point.
 - `about.html` / `about.css`: Single-screen 2-column layout (story narrative on left, circular profile image on right) fitted to 100vh with zero desktop scroll.
 - `portofolio.html` / `portofolio.css` / `portofolio.js`: Live project showcase displaying Bagimu Extra (Eskul Management System) and E-Voting Platform SMK Bagimu Negeriku, with direct URLs and interactive lightbox modal.
 - `contact.html` / `contact.css`: Minimalist contact channels (Instagram, WhatsApp, and Gmail: `david75bekasi@gmail.com`) with floating SVG icons and structured persona chips, fitted to single-screen viewport.

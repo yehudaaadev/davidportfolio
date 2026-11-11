@@ -104,7 +104,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: center top;
+		object-position: center 62%;
 		border-radius: 50%;
 		border: 4px solid var(--color-primary);
 		box-shadow: 0 16px 40px rgba(55, 70, 208, 0.22);

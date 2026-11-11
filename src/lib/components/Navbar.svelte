@@ -20,6 +20,9 @@
 
 <header>
 	<nav class="navbar">
+		<a href="{base}/" class="brand-monogram" aria-label="David Yehuda Surbakti Home">
+			<span class="brand-text">DYS</span><span class="brand-dot">.</span>
+		</a>
 		<ul class="nav-links">
 			{#each links as link}
 				<li>
@@ -33,7 +36,7 @@
 <style>
 	.navbar {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
 		align-items: center;
 		padding: 28px 64px;
 		background-color: var(--bg-primary);
@@ -43,6 +46,28 @@
 		backdrop-filter: blur(8px);
 		flex-shrink: 0;
 		width: 100%;
+	}
+
+	.brand-monogram {
+		text-decoration: none;
+		font-family: var(--font-tech);
+		font-size: clamp(20px, 1.6vw, 25px);
+		font-weight: 700;
+		color: var(--color-primary);
+		letter-spacing: -0.5px;
+		display: inline-flex;
+		align-items: baseline;
+		transition: transform var(--transition-fast), opacity var(--transition-fast);
+	}
+
+	.brand-monogram:hover {
+		transform: translateY(-1px);
+		opacity: 0.85;
+	}
+
+	.brand-dot {
+		color: var(--color-primary-dark);
+		font-weight: 800;
 	}
 
 	.nav-links {
@@ -85,29 +110,33 @@
 	@media (max-width: 768px) {
 		.navbar {
 			padding: 20px 28px;
-			justify-content: center;
+			justify-content: space-between;
 		}
 
 		.nav-links {
-			gap: 28px;
+			gap: 24px;
 		}
 
 		.nav-links a {
-			font-size: 17px;
+			font-size: 16.5px;
 		}
 	}
 
 	@media (max-width: 480px) {
 		.navbar {
-			padding: 18px 20px;
+			padding: 16px 20px;
+		}
+
+		.brand-monogram {
+			font-size: 19px;
 		}
 
 		.nav-links {
-			gap: 20px;
+			gap: 16px;
 		}
 
 		.nav-links a {
-			font-size: 15.5px;
+			font-size: 14.5px;
 		}
 	}
 </style>

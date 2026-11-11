@@ -71,7 +71,7 @@ h1, h2, h3, h4,
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 24px 60px;
+    padding: 28px 64px;
     background-color: var(--bg-primary);
     position: sticky;
     top: 0;
@@ -83,16 +83,17 @@ h1, h2, h3, h4,
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 48px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--color-primary);
-    font-size: 16px;
-    font-weight: 500;
+    font-size: clamp(18px, 1.25vw, 21px);
+    font-weight: 600;
     padding: 6px 0;
     position: relative;
+    letter-spacing: -0.2px;
     transition: color var(--transition-fast);
 }
 
@@ -102,7 +103,7 @@ h1, h2, h3, h4,
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 2.5px;
     background-color: var(--color-primary);
     transition: width var(--transition-base);
 }
@@ -140,16 +141,16 @@ h1, h2, h3, h4,
 /* Responsive Navbar & Footer */
 @media (max-width: 768px) {
     .navbar {
-        padding: 18px 24px;
+        padding: 20px 28px;
         justify-content: center;
     }
 
     .nav-links {
-        gap: 24px;
+        gap: 28px;
     }
 
     .nav-links a {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .bawah {
@@ -159,14 +160,14 @@ h1, h2, h3, h4,
 
 @media (max-width: 480px) {
     .navbar {
-        padding: 16px 20px;
+        padding: 18px 20px;
     }
 
     .nav-links {
-        gap: 16px;
+        gap: 20px;
     }
 
     .nav-links a {
-        font-size: 14px;
+        font-size: 15.5px;
     }
 }

@@ -91,27 +91,26 @@
 	}
 
 	.foto-card {
-		width: clamp(230px, 22vw, 310px);
-		aspect-ratio: 3 / 4;
-		border-radius: 18px;
+		width: clamp(210px, 22vw, 290px);
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
 		overflow: hidden;
 		background-color: var(--bg-surface);
-		border: 1px solid var(--color-border);
-		box-shadow: 0 20px 45px rgba(55, 70, 208, 0.12);
-		transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color var(--transition-fast);
+		border: 3.5px solid var(--color-primary);
+		box-shadow: 0 16px 40px rgba(55, 70, 208, 0.22);
+		transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
 	}
 
 	.foto-card:hover {
-		transform: translateY(-6px);
-		box-shadow: 0 25px 55px rgba(55, 70, 208, 0.22);
-		border-color: var(--color-primary);
+		transform: scale(1.03);
+		box-shadow: 0 22px 50px rgba(55, 70, 208, 0.32);
 	}
 
 	.foto-asli {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: center 55%;
+		object-position: center 80%;
 		display: block;
 	}
 
@@ -128,7 +127,7 @@
 		}
 
 		.foto-card {
-			width: 200px;
+			width: 190px;
 		}
 	}
 </style>

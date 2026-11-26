@@ -64,7 +64,17 @@
 		<div class="splash-curtain bottom" class:exiting={isExiting}></div>
 
 		<div class="splash-inner" class:fade-out={isExiting}>
+			<div class="ambient-glow" aria-hidden="true"></div>
+			<div class="splash-frame" aria-hidden="true">
+				<span class="corner tl"></span>
+				<span class="corner tr"></span>
+				<span class="corner bl"></span>
+				<span class="corner br"></span>
+			</div>
+
 			<div class="center-content">
+				<div class="brand-mark" aria-hidden="true">DYS<span>.</span></div>
+
 				<div class="title-wrap">
 					<h2 class="creator-name">David Yehuda Surbakti</h2>
 					<p class="creator-role">FULLSTACK DEVELOPER</p>
@@ -150,12 +160,126 @@
 		transform: scale(0.96) translateY(-15px);
 	}
 
+	.splash-inner::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image:
+			linear-gradient(rgba(245, 241, 234, 0.038) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(245, 241, 234, 0.038) 1px, transparent 1px);
+		background-size: 56px 56px;
+		-webkit-mask-image: radial-gradient(circle at 50% 50%, #000 12%, transparent 72%);
+		mask-image: radial-gradient(circle at 50% 50%, #000 12%, transparent 72%);
+		pointer-events: none;
+	}
+
+	.ambient-glow {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: min(70vw, 620px);
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: radial-gradient(
+			circle,
+			rgba(83, 98, 222, 0.22) 0%,
+			rgba(83, 98, 222, 0.06) 42%,
+			transparent 70%
+		);
+		filter: blur(30px);
+		pointer-events: none;
+		animation: glow-breathe 7s ease-in-out infinite alternate;
+	}
+
+	.splash-frame {
+		position: absolute;
+		inset: 28px;
+		pointer-events: none;
+	}
+
+	.corner {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		border: 0 solid rgba(245, 241, 234, 0.22);
+	}
+
+	.corner.tl {
+		top: 0;
+		left: 0;
+		border-top-width: 1px;
+		border-left-width: 1px;
+	}
+
+	.corner.tr {
+		top: 0;
+		right: 0;
+		border-top-width: 1px;
+		border-right-width: 1px;
+	}
+
+	.corner.bl {
+		bottom: 0;
+		left: 0;
+		border-bottom-width: 1px;
+		border-left-width: 1px;
+	}
+
+	.corner.br {
+		bottom: 0;
+		right: 0;
+		border-bottom-width: 1px;
+		border-right-width: 1px;
+	}
+
+	@keyframes glow-breathe {
+		from {
+			opacity: 0.55;
+			transform: translate(-50%, -50%) scale(0.92);
+		}
+		to {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1.08);
+		}
+	}
+
+	@keyframes rise-in {
+		from {
+			opacity: 0;
+			transform: translateY(14px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	.center-content {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
 		gap: 24px;
+	}
+
+	.brand-mark {
+		font-family: var(--font-tech);
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 8px;
+		color: #9AA8FF;
+		margin-bottom: 4px;
+		text-shadow: 0 0 18px rgba(83, 98, 222, 0.5);
+		animation: rise-in 0.7s 0.1s both;
+	}
+
+	.brand-mark span {
+		color: #FFFFFF;
+	}
+
+	.title-wrap {
+		animation: rise-in 0.7s 0.25s both;
 	}
 
 	.creator-name {
@@ -180,6 +304,7 @@
 		align-items: baseline;
 		line-height: 0.9;
 		margin-top: 10px;
+		animation: rise-in 0.7s 0.4s both;
 	}
 
 	.counter-number {
@@ -189,6 +314,7 @@
 		letter-spacing: -3px;
 		color: #FFFFFF;
 		font-variant-numeric: tabular-nums;
+		text-shadow: 0 0 32px rgba(83, 98, 222, 0.28);
 	}
 
 	.counter-symbol {
@@ -207,17 +333,33 @@
 		border-radius: 2px;
 		overflow: hidden;
 		margin-top: 8px;
+		animation: rise-in 0.7s 0.55s both;
 	}
 
 	.progress-bar {
 		height: 100%;
 		background: linear-gradient(90deg, #5362DE, #FFFFFF);
+		box-shadow: 0 0 14px rgba(83, 98, 222, 0.55);
 		transition: width 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 	}
 
 	@media (max-width: 600px) {
 		.splash-inner {
 			padding: 28px 20px;
+		}
+
+		.splash-frame {
+			inset: 18px;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.ambient-glow,
+		.brand-mark,
+		.title-wrap,
+		.counter-wrap,
+		.progress-track {
+			animation: none;
 		}
 	}
 </style>

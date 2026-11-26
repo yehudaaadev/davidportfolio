@@ -3,25 +3,12 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import SplashScreen from '$lib/components/SplashScreen.svelte';
-	import { onMount } from 'svelte';
 
 	let { children } = $props();
 	let splashDone = $state(false);
 
-	onMount(() => {
-		const visited = sessionStorage.getItem('visited_session');
-		if (visited) {
-			splashDone = true;
-		}
-	});
-
 	function handleSplashComplete() {
 		splashDone = true;
-		try {
-			sessionStorage.setItem('visited_session', 'true');
-		} catch (e) {
-			// ignore storage errors
-		}
 	}
 </script>
 

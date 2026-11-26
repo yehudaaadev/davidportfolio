@@ -64,11 +64,6 @@
 		<div class="splash-curtain bottom" class:exiting={isExiting}></div>
 
 		<div class="splash-inner" class:fade-out={isExiting}>
-			<div class="meta-header">
-				<span class="mono-badge">PORTFOLIO v2.5</span>
-				<span class="mono-badge">2026 EDITION</span>
-			</div>
-
 			<div class="center-content">
 				<div class="title-wrap">
 					<h2 class="creator-name">David Yehuda Surbakti</h2>
@@ -83,11 +78,6 @@
 				<div class="progress-track" aria-hidden="true">
 					<div class="progress-bar" style="width: {progress}%"></div>
 				</div>
-			</div>
-
-			<div class="meta-footer">
-				<span class="status-indicator">SYSTEM READY</span>
-				<span class="click-hint">CLICK ANYWHERE TO SKIP</span>
 			</div>
 		</div>
 	</div>
@@ -150,7 +140,7 @@
 		padding: 48px 40px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 		color: #F5F1EA;
 		transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 	}
@@ -158,45 +148,6 @@
 	.splash-inner.fade-out {
 		opacity: 0;
 		transform: scale(0.96) translateY(-15px);
-	}
-
-	.meta-header,
-	.meta-footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		font-family: var(--font-tech);
-		font-size: 13px;
-		letter-spacing: 1.5px;
-		opacity: 0.8;
-	}
-
-	.mono-badge {
-		border: 1px solid rgba(245, 241, 234, 0.25);
-		padding: 5px 14px;
-		border-radius: 4px;
-	}
-
-	.status-indicator {
-		display: flex;
-		align-items: center;
-		gap: 8px;
-	}
-
-	.status-indicator::before {
-		content: '';
-		display: inline-block;
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		background: #39FF14;
-		box-shadow: 0 0 10px #39FF14;
-	}
-
-	.click-hint {
-		font-size: 11px;
-		opacity: 0.6;
-		letter-spacing: 1px;
 	}
 
 	.center-content {
@@ -267,10 +218,6 @@
 	@media (max-width: 600px) {
 		.splash-inner {
 			padding: 28px 20px;
-		}
-
-		.click-hint {
-			display: none;
 		}
 	}
 </style>

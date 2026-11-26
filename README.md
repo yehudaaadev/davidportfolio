@@ -14,7 +14,7 @@ Personal portfolio website re-architected with **Svelte 5** and **SvelteKit 2**,
   - `src/routes/+page.svelte`: Hero landing page with fluid typography.
   - `src/routes/about/+page.svelte`: Narrative story and circular profile portrait.
   - `src/routes/portfolio/+page.svelte`: Live production project showcase with interactive modal lightbox.
-  - `src/routes/contact/+page.svelte`: Contact channels (Instagram, WhatsApp, Gmail).
+  - `src/routes/contact/+page.svelte`: Contact channels (Instagram, WhatsApp, Gmail, GitHub).
 - **Deployment**: Automated via GitHub Actions workflow (`.github/workflows/static.yml`).
 
 ## Local Development

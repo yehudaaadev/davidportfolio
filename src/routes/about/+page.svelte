@@ -4,9 +4,9 @@
 
 <svelte:head>
 	<title>About - David Yehuda Surbakti</title>
-	<meta name="description" content="Learn about David Yehuda Surbakti, a fullstack developer building Laravel apps for SMK Bagimu." />
+	<meta name="description" content="Learn about David Yehuda Surbakti, a Fullstack Developer who graduated from SMK Bagimu Negeriku in 2025." />
 	<meta property="og:title" content="About - David Yehuda Surbakti" />
-	<meta property="og:description" content="Fullstack developer focused on backend and open-source tools." />
+	<meta property="og:description" content="Fullstack Developer graduated in 2025, building digital solutions for the school community." />
 	<meta property="og:image" content="https://yehudaaadev.github.io/davidportfolio/image/profile.jpeg" />
 	<meta property="og:url" content="https://yehudaaadev.github.io/davidportfolio/about" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -16,8 +16,9 @@
 	<div class="about-content">
 		<div class="about-text-col">
 			<h1 class="about-title">About <span>Me</span></h1>
-			<p class="teks-perkenalan">I'm a Fullstack Developer. I studied at [ISI: sekolah/kampus] and started coding in [ISI: tahun]. I enjoy [ISI: apa yang saya suka] and my career goal is [ISI: target karier].</p>
-			<p class="teks-perkenalan">I built <strong>Bagimu Extra</strong> and <strong>E‑Voting</strong> for SMK Bagimu Negeriku. Both are used by the entire school community — from students and teachers to school staff.</p>
+			<p class="teks-perkenalan">I'm a Fullstack Developer who graduated from SMK Bagimu Negeriku in 2025. I started my coding journey in 2025 and enjoy building all kinds of things, from websites and tools to applications and other creative digital solutions.</p>
+			<p class="teks-perkenalan">I developed Bagimu Extra and E-Voting for SMK Bagimu Negeriku. Both projects are used by the entire school community, including students, teachers, and school staff.</p>
+			<p class="teks-perkenalan">I'm passionate about exploring new technologies, turning ideas into reality, and creating useful digital solutions. My career goal is to grow into a skilled Fullstack Developer who can build impactful, reliable, and innovative applications.</p>
 			<h2 class="skills-title">Skills</h2>
 			<div class="skill-tags">
 				<span class="tag">Fullstack Developer</span>
@@ -77,9 +78,6 @@
 		letter-spacing: -0.15px;
 	}
 
-	.teks-perkenalan strong {
-		color: var(--color-primary);
-	}
 	.about-container {
 		flex: 1;
 		display: flex;

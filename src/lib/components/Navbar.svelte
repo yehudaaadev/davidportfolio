@@ -22,7 +22,7 @@
 <header>
 	<nav class="navbar">
 		<a href="{base}/" class="brand-monogram" aria-label="David Yehuda Surbakti Home">
-			<img src="{base}/favicon.png" alt="DYS logo" class="brand-logo" width="40" height="40" />
+			<img src="{base}/image/dys-logo-white.png" alt="DYS logo" class="brand-logo" />
 		</a>
 		<ul class="nav-links">
 			{#each links as link}
@@ -63,8 +63,8 @@
 
 	.brand-logo {
 		display: block;
-		width: clamp(34px, 3vw, 44px);
-		height: clamp(34px, 3vw, 44px);
+		width: clamp(72px, 6vw, 92px);
+		height: auto;
 	}
 
 	.nav-links {

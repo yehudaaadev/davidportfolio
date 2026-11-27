@@ -9,7 +9,7 @@ export const projects = [
 		url: 'https://bagimuextra.smkbagimunegeriku.sch.id/',
 		description:
 			'An integrated information and management system for school extracurricular activities at SMK Bagimu Negeriku. Features online student registration, digital QR-based attendance tracking, grade recapitulation, activity reporting, and automated WhatsApp notifications.',
-		tags: ['Laravel', 'MySQL', 'Tailwind CSS', 'Alpine.js', 'WhatsApp API', 'Live Production'],
+		tags: ['Laravel', 'React', 'Inertia.js', 'Alpine.js', 'Tailwind CSS', 'MySQL', 'WhatsApp API', 'Live Production'],
 		role: 'Solo Developer',
 		impact: 'Used by the entire school community'
 	},
@@ -23,7 +23,7 @@ export const projects = [
 		url: 'https://evoting.smkbagimunegeriku.sch.id/',
 		description:
 			'A secure electronic voting platform designed for student council and school organization elections. Built for transparency, accuracy, and real-time auditability, featuring automated voter token generation, live debate controls, audit logging, and WhatsApp gateway integration.',
-		tags: ['Laravel', 'MySQL', 'Tailwind CSS', 'WhatsApp Gateway', 'Live Production'],
+		tags: ['Laravel', 'Laravel Mix', 'Tailwind CSS', 'MySQL', 'WhatsApp Gateway', 'Live Production'],
 		role: 'Solo Developer',
 		impact: 'Used by the entire school community'
 	}

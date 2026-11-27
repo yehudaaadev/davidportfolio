@@ -19,10 +19,6 @@
 			<p class="teks-perkenalan">I'm a Fullstack Developer who graduated from SMK Bagimu Negeriku in 2025. I started my coding journey in 2025 and enjoy building all kinds of things, from websites and tools to applications and other creative digital solutions.</p>
 			<p class="teks-perkenalan">I developed Bagimu Extra and E-Voting for SMK Bagimu Negeriku. Both projects are used by the entire school community, including students, teachers, and school staff.</p>
 			<p class="teks-perkenalan">I'm passionate about exploring new technologies, turning ideas into reality, and creating useful digital solutions. My career goal is to grow into a skilled Fullstack Developer who can build impactful, reliable, and innovative applications.</p>
-			<h2 class="skills-title">Skills</h2>
-			<div class="skill-tags">
-				<span class="tag">Fullstack Developer</span>
-			</div>
 		</div>
 
 		<div class="about-image-col">
@@ -39,38 +35,6 @@
 </section>
 
 <style>
-	.skills-title {
-		margin-top: 24px;
-		font-size: clamp(20px, 2vw, 24px);
-		color: var(--color-primary);
-		font-family: var(--font-heading);
-	}
-
-	.skill-tags {
-		margin-top: 12px;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-	}
-
-	.tag {
-		padding: 6px 14px;
-		background-color: rgba(55, 70, 208, 0.08);
-		color: var(--color-primary);
-		border-radius: 20px;
-		border: 1px solid var(--color-border);
-		font-family: var(--font-tech);
-		font-size: 13px;
-		font-weight: 600;
-		letter-spacing: 0.3px;
-		transition: transform var(--transition-fast), border-color var(--transition-fast);
-	}
-
-	.tag:hover {
-		transform: translateY(-2px);
-		border-color: var(--color-primary);
-	}
-
 	.teks-perkenalan {
 		color: #111;
 		font-size: clamp(17px, 1.2vw, 18px);

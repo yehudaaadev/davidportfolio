@@ -5,6 +5,7 @@
 	const links = [
 		{ name: 'Home', href: `${base}/` },
 		{ name: 'About', href: `${base}/about` },
+		{ name: 'Skills', href: `${base}/skills` },
 		{ name: 'Portfolio', href: `${base}/portfolio` },
 		{ name: 'Contact', href: `${base}/contact` }
 	];
@@ -132,11 +133,14 @@
 		}
 
 		.nav-links {
-			gap: 16px;
+			gap: 10px;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			row-gap: 6px;
 		}
 
 		.nav-links a {
-			font-size: 14.5px;
+			font-size: 13px;
 		}
 	}
 </style>

@@ -17,10 +17,11 @@
 
 	.footer-inner {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		justify-content: space-between;
 		align-items: center;
 		gap: 16px;
-		text-align: center;
+		flex-wrap: wrap;
 		max-width: 960px;
 		margin: 0 auto;
 	}
@@ -46,6 +47,14 @@
 	@media (max-width: 768px) {
 		.bawah {
 			padding: 26px 24px;
+		}
+	}
+
+	@media (max-width: 560px) {
+		.footer-inner {
+			flex-direction: column;
+			text-align: center;
+			gap: 12px;
 		}
 	}
 </style>

@@ -4,22 +4,24 @@
 
 <svelte:head>
 	<title>About - David Yehuda Surbakti</title>
+	<meta name="description" content="Learn about David Yehuda Surbakti, a fullstack developer building Laravel apps for SMK Bagimu." />
+	<meta property="og:title" content="About - David Yehuda Surbakti" />
+	<meta property="og:description" content="Fullstack developer focused on backend and open-source tools." />
+	<meta property="og:image" content="https://yehudaaadev.github.io/davidportfolio/image/profile.jpeg" />
+	<meta property="og:url" content="https://yehudaaadev.github.io/davidportfolio/about" />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <section class="about-container">
 	<div class="about-content">
 		<div class="about-text-col">
 			<h1 class="about-title">About <span>Me</span></h1>
-			<p class="teks-perkenalan">
-				I am a Fullstack Developer focused on building high-performance web applications, reliable
-				system tools, and thoughtful digital experiences. With a strong foundation in modern
-				frameworks and backend architecture, I transform complex ideas into intuitive, scalable, and
-				production-ready software.
-			</p>
-			<p class="teks-perkenalan" style="margin-top: 14px;">
-				Currently based in Semarang, Indonesia. I specialize in full-stack architecture, clean code
-				practices, and responsive design systems that emphasize typography, accessibility, and speed.
-			</p>
+			<p class="teks-perkenalan">I'm a Fullstack Developer. I studied at [ISI: sekolah/kampus] and started coding in [ISI: tahun]. I enjoy [ISI: apa yang saya suka] and my career goal is [ISI: target karier].</p>
+			<p class="teks-perkenalan">I built <strong>Bagimu Extra</strong> and <strong>E‑Voting</strong> for SMK Bagimu Negeriku. Both are used by the entire school community — from students and teachers to school staff.</p>
+			<h2 class="skills-title">Skills</h2>
+			<div class="skill-tags">
+				<span class="tag">Fullstack Developer</span>
+			</div>
 		</div>
 
 		<div class="about-image-col">
@@ -36,6 +38,48 @@
 </section>
 
 <style>
+	.skills-title {
+		margin-top: 24px;
+		font-size: clamp(20px, 2vw, 24px);
+		color: var(--color-primary);
+		font-family: var(--font-heading);
+	}
+
+	.skill-tags {
+		margin-top: 12px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.tag {
+		padding: 6px 14px;
+		background-color: rgba(55, 70, 208, 0.08);
+		color: var(--color-primary);
+		border-radius: 20px;
+		border: 1px solid var(--color-border);
+		font-family: var(--font-tech);
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: 0.3px;
+		transition: transform var(--transition-fast), border-color var(--transition-fast);
+	}
+
+	.tag:hover {
+		transform: translateY(-2px);
+		border-color: var(--color-primary);
+	}
+
+	.teks-perkenalan {
+		color: #111;
+		font-size: clamp(17px, 1.2vw, 18px);
+		line-height: 1.75;
+		letter-spacing: -0.15px;
+	}
+
+	.teks-perkenalan strong {
+		color: var(--color-primary);
+	}
 	.about-container {
 		flex: 1;
 		display: flex;
@@ -75,13 +119,6 @@
 	.about-title span {
 		font-weight: 400;
 		opacity: 0.9;
-	}
-
-	.teks-perkenalan {
-		color: var(--color-primary);
-		font-size: clamp(15px, 1.2vw, 17px);
-		line-height: 1.75;
-		letter-spacing: -0.15px;
 	}
 
 	.about-image-col {

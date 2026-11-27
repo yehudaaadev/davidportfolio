@@ -38,6 +38,12 @@
 
 <svelte:head>
 	<title>Portfolio - David Yehuda Surbakti</title>
+	<meta name="description" content="Portfolio projects: Bagimu Extra and E‑Voting platform." />
+	<meta property="og:title" content="Portfolio - David Yehuda Surbakti" />
+	<meta property="og:description" content="Projects built with Laravel, MySQL and Tailwind." />
+	<meta property="og:image" content="https://yehudaaadev.github.io/davidportfolio/image/profile.jpeg" />
+	<meta property="og:url" content="https://yehudaaadev.github.io/davidportfolio/portfolio" />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <section class="portfolio-container">
@@ -48,10 +54,12 @@
 
 	<div class="projects-grid">
 		{#each projects as project}
+			<!-- svelte-ignore a11y_no_noninteractive_element_to_interactive_role -->
 			<article
 				class="project-card"
 				role="button"
 				tabindex="0"
+				aria-label="View project {project.title}"
 				onclick={() => openLightbox(project)}
 				onkeydown={(e) => {
 					if (e.key === 'Enter' || e.key === ' ') {
@@ -61,7 +69,7 @@
 				}}
 			>
 				<div class="project-image">
-					<img src="{base}/{project.image}" alt={project.title} />
+					<img src="{base}/{project.image}" alt="{project.imageAlt}" />
 					<div class="project-overlay">
 						<button class="overlay-btn" type="button">View Details</button>
 					</div>
@@ -91,6 +99,7 @@
 					<div class="project-number">{project.number}</div>
 					<h2 class="project-title">{project.title}</h2>
 					<p class="project-description">{project.description}</p>
+					<p class="project-meta">My role: {project.role} · {project.impact}</p>
 					<div class="project-tags">
 						{#each project.tags as tag}
 							<span class="tag">{tag}</span>
@@ -118,10 +127,11 @@
 			<button class="lightbox-nav lightbox-next" onclick={nextProject} aria-label="Next project">&#8594;</button>
 
 			<div class="lightbox-image">
-				<img src="{base}/{activeProject.image}" alt={activeProject.title} />
+				<img src="{base}/{activeProject.image}" alt="{activeProject.imageAlt}" />
 			</div>
 			<div class="lightbox-info">
 				<h2 class="lightbox-title">{activeProject.title}</h2>
+				<p class="project-meta">My role: {activeProject.role} · {activeProject.impact}</p>
 				<div class="lightbox-url">
 					<a href={activeProject.url} target="_blank" rel="noopener noreferrer">
 						<span>{activeProject.url}</span>
@@ -312,6 +322,14 @@
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+	}
+
+	.project-meta {
+		font-size: clamp(13px, 1.1vw, 15px);
+		line-height: 1.5;
+		color: var(--color-text-dark);
+		margin-bottom: 8px;
+		font-weight: 500;
 	}
 
 	.project-tags {

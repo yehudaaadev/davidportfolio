@@ -4,6 +4,7 @@
 	--bg-footer: #E6E1D7;
 	--color-primary: #3746D0;
 	--color-primary-dark: #26339E;
+	--color-text-dark: #111;
 	--color-text-muted: #5362DE;
 	--color-border: rgba(55, 70, 208, 0.2);
 	--color-border-hover: rgba(55, 70, 208, 0.5);
@@ -14,6 +15,13 @@
 	--font-serif: var(--font-heading);
 	--transition-fast: 0.2s ease;
 	--transition-base: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Focus states for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
 }
 
 * {
@@ -46,4 +54,12 @@ h1, h2, h3, h4,
 
 .font-tech {
 	font-family: var(--font-tech);
+}
+
+/* Paragraph contrast & size */
+.teks-perkenalan,
+p {
+	font-size: clamp(17px, 1.2vw, 18px);
+	line-height: 1.7;
+	color: var(--color-text-dark);
 }

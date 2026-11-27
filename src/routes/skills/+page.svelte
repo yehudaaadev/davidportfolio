@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <svelte:head>
 	<title>Skills - David Yehuda Surbakti</title>
 	<meta name="description" content="Frameworks and languages used by David Yehuda Surbakti across web, mobile, desktop, and systems projects." />
@@ -9,6 +13,7 @@
 </svelte:head>
 
 <section class="skills-container">
+	<img src="{base}/favicon.svg" alt="DYS logo" class="skills-logo" />
 	<h1 class="skills-title">Skills</h1>
 	<p class="skills-intro">Frameworks and languages I use across web, mobile, desktop, and systems projects.</p>
 
@@ -108,6 +113,12 @@
 		max-width: 1000px;
 		margin: 0 auto;
 		padding: 40px 24px 64px;
+	}
+
+	.skills-logo {
+		width: clamp(48px, 6vw, 72px);
+		height: clamp(48px, 6vw, 72px);
+		margin-bottom: 20px;
 	}
 
 	.skills-title {

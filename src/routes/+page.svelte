@@ -16,7 +16,6 @@
 	<p class="atas">Hi my name is</p>
 	<h1 class="tengah">David Yehuda Surbakti</h1>
 	<p class="bawah1">I'm a <span class="lingkaran">Fullstack</span> Developer</p>
-	<p class="pitch">I build Laravel web apps and open‑source tools.</p>
 	<div class="cta-group">
 		<a href="{base}/portfolio" class="btn btn-outline">View Projects</a>
 		<span class="btn btn-outline" aria-disabled="true" title="CV coming soon">CV Coming Soon</span>
@@ -85,16 +84,8 @@
 		}
 	}
 
-	.pitch {
-		margin-top: 18px;
-		font-size: clamp(17px, 1.8vw, 18px);
-		color: var(--color-text-dark);
-		font-weight: 400;
-		line-height: 1.5;
-	}
-
 	.cta-group {
-		margin-top: 22px;
+		margin-top: 28px;
 		display: flex;
 		gap: 12px;
 		justify-content: center;

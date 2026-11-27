@@ -1,5 +1,84 @@
 <script>
 	import { base } from '$app/paths';
+
+	const skillGroups = [
+		{
+			title: 'Focus',
+			skills: [{ name: 'Fullstack Developer' }]
+		},
+		{
+			title: 'Frontend',
+			skills: [
+				{ name: 'JavaScript', icon: 'javascript' },
+				{ name: 'TypeScript', icon: 'typescript' },
+				{ name: 'React', icon: 'react' },
+				{ name: 'Next.js', icon: 'nextdotjs' },
+				{ name: 'SvelteKit', icon: 'svelte', iconAlt: 'Svelte logo' },
+				{ name: 'Svelte', icon: 'svelte' },
+				{ name: 'Tailwind CSS', icon: 'tailwindcss' },
+				{ name: 'Three.js', icon: 'threedotjs' }
+			]
+		},
+		{
+			title: 'Backend',
+			skills: [
+				{ name: 'PHP', icon: 'php' },
+				{ name: 'Laravel', icon: 'laravel' },
+				{ name: 'Node.js', icon: 'nodedotjs' },
+				{ name: 'Go', icon: 'go' },
+				{ name: 'Python', icon: 'python' },
+				{ name: 'FastAPI', icon: 'fastapi' },
+				{ name: 'Flask', icon: 'flask' },
+				{ name: 'Elixir', icon: 'elixir' },
+				{ name: 'Firebase Functions', icon: 'firebase', iconAlt: 'Firebase logo' }
+			]
+		},
+		{
+			title: 'Mobile',
+			skills: [
+				{ name: 'Dart', icon: 'dart' },
+				{ name: 'Flutter', icon: 'flutter' },
+				{ name: 'Kotlin', icon: 'kotlin' },
+				{ name: 'Jetpack Compose', icon: 'jetpackcompose' },
+				{ name: 'Firebase', icon: 'firebase' }
+			]
+		},
+		{
+			title: 'Database',
+			skills: [
+				{ name: 'MySQL', icon: 'mysql' },
+				{ name: 'PostgreSQL', icon: 'postgresql' },
+				{ name: 'SQLite', icon: 'sqlite' },
+				{ name: 'Firestore', icon: 'firebase', iconAlt: 'Firebase logo' }
+			]
+		},
+		{
+			title: 'Desktop & Systems',
+			skills: [
+				{ name: 'Rust', icon: 'rust' },
+				{ name: 'Tauri', icon: 'tauri' },
+				{ name: 'C#', icon: 'dotnet', iconAlt: '.NET logo' },
+				{ name: 'WinForms', icon: 'dotnet', iconAlt: '.NET logo' },
+				{ name: 'C / C++', icon: 'cplusplus' },
+				{ name: 'Zig', icon: 'zig' },
+				{ name: 'Godot', icon: 'godotengine', iconAlt: 'Godot logo' },
+				{ name: 'GDScript', icon: 'godotengine', iconAlt: 'Godot logo' },
+				{ name: 'Luau', icon: 'roblox', iconAlt: 'Roblox logo' }
+			]
+		},
+		{
+			title: 'Tools',
+			skills: [
+				{ name: 'Vite', icon: 'vite' },
+				{ name: 'Vitest', icon: 'vitest' },
+				{ name: 'Laravel Mix', icon: 'laravel' },
+				{ name: 'Gradle', icon: 'gradle' },
+				{ name: 'CMake', icon: 'cmake' },
+				{ name: 'PowerShell', icon: 'shell', iconAlt: 'Shell logo' },
+				{ name: 'Docker', icon: 'docker' }
+			]
+		}
+	];
 </script>
 
 <svelte:head>
@@ -17,90 +96,28 @@
 	<h1 class="skills-title">Skills</h1>
 	<p class="skills-intro">Frameworks and languages I use across web, mobile, desktop, and systems projects.</p>
 
-	<div class="skill-group">
-		<h2>Focus</h2>
-		<div class="skill-pills">
-			<span class="pill">Fullstack Developer</span>
+	{#each skillGroups as group}
+		<div class="skill-group">
+			<h2>{group.title}</h2>
+			<div class="skill-pills">
+				{#each group.skills as skill}
+					<span class="pill">
+						{#if skill.icon}
+							<img
+								src="https://cdn.simpleicons.org/{skill.icon}/3746D0"
+								alt={skill.iconAlt || `${skill.name} logo`}
+								class="pill-icon"
+								width="16"
+								height="16"
+								loading="lazy"
+							/>
+						{/if}
+						<span>{skill.name}</span>
+					</span>
+				{/each}
+			</div>
 		</div>
-	</div>
-
-	<div class="skill-group">
-		<h2>Frontend</h2>
-		<div class="skill-pills">
-			<span class="pill">JavaScript</span>
-			<span class="pill">TypeScript</span>
-			<span class="pill">React</span>
-			<span class="pill">Next.js</span>
-			<span class="pill">SvelteKit</span>
-			<span class="pill">Svelte</span>
-			<span class="pill">Tailwind CSS</span>
-			<span class="pill">Three.js</span>
-		</div>
-	</div>
-
-	<div class="skill-group">
-		<h2>Backend</h2>
-		<div class="skill-pills">
-			<span class="pill">PHP</span>
-			<span class="pill">Laravel</span>
-			<span class="pill">Node.js</span>
-			<span class="pill">Go</span>
-			<span class="pill">Python</span>
-			<span class="pill">FastAPI</span>
-			<span class="pill">Flask</span>
-			<span class="pill">Elixir</span>
-			<span class="pill">Firebase Functions</span>
-		</div>
-	</div>
-
-	<div class="skill-group">
-		<h2>Mobile</h2>
-		<div class="skill-pills">
-			<span class="pill">Dart</span>
-			<span class="pill">Flutter</span>
-			<span class="pill">Kotlin</span>
-			<span class="pill">Jetpack Compose</span>
-			<span class="pill">Firebase</span>
-		</div>
-	</div>
-
-	<div class="skill-group">
-		<h2>Database</h2>
-		<div class="skill-pills">
-			<span class="pill">MySQL</span>
-			<span class="pill">PostgreSQL</span>
-			<span class="pill">SQLite</span>
-			<span class="pill">Firestore</span>
-		</div>
-	</div>
-
-	<div class="skill-group">
-		<h2>Desktop &amp; Systems</h2>
-		<div class="skill-pills">
-			<span class="pill">Rust</span>
-			<span class="pill">Tauri</span>
-			<span class="pill">C#</span>
-			<span class="pill">WinForms</span>
-			<span class="pill">C / C++</span>
-			<span class="pill">Zig</span>
-			<span class="pill">Godot</span>
-			<span class="pill">GDScript</span>
-			<span class="pill">Luau</span>
-		</div>
-	</div>
-
-	<div class="skill-group">
-		<h2>Tools</h2>
-		<div class="skill-pills">
-			<span class="pill">Vite</span>
-			<span class="pill">Vitest</span>
-			<span class="pill">Laravel Mix</span>
-			<span class="pill">Gradle</span>
-			<span class="pill">CMake</span>
-			<span class="pill">PowerShell</span>
-			<span class="pill">Docker</span>
-		</div>
-	</div>
+	{/each}
 </section>
 
 <style>
@@ -161,7 +178,10 @@
 	}
 
 	.pill {
-		padding: 8px 18px;
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		padding: 8px 16px;
 		background-color: var(--bg-surface);
 		color: var(--color-primary);
 		border: 1.5px solid var(--color-border);
@@ -179,6 +199,14 @@
 		border-color: var(--color-primary);
 	}
 
+	.pill-icon {
+		display: block;
+		width: 16px;
+		height: 16px;
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+
 	@media (max-width: 480px) {
 		.skills-container {
 			padding: 32px 20px 56px;
@@ -190,7 +218,13 @@
 
 		.pill {
 			font-size: 12px;
-			padding: 6px 14px;
+			padding: 6px 12px;
+			gap: 6px;
+		}
+
+		.pill-icon {
+			width: 14px;
+			height: 14px;
 		}
 	}
 </style>

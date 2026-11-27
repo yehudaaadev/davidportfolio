@@ -22,7 +22,7 @@
 <header>
 	<nav class="navbar">
 		<a href="{base}/" class="brand-monogram" aria-label="David Yehuda Surbakti Home">
-			<span class="brand-text">DYS</span><span class="brand-dot">.</span>
+			<img src="{base}/favicon.svg" alt="DYS logo" class="brand-logo" width="40" height="40" />
 		</a>
 		<ul class="nav-links">
 			{#each links as link}
@@ -51,13 +51,8 @@
 
 	.brand-monogram {
 		text-decoration: none;
-		font-family: var(--font-tech);
-		font-size: clamp(20px, 1.6vw, 25px);
-		font-weight: 700;
-		color: var(--color-primary);
-		letter-spacing: -0.5px;
 		display: inline-flex;
-		align-items: baseline;
+		align-items: center;
 		transition: transform var(--transition-fast), opacity var(--transition-fast);
 	}
 
@@ -66,9 +61,10 @@
 		opacity: 0.85;
 	}
 
-	.brand-dot {
-		color: var(--color-primary-dark);
-		font-weight: 800;
+	.brand-logo {
+		display: block;
+		width: clamp(34px, 3vw, 44px);
+		height: clamp(34px, 3vw, 44px);
 	}
 
 	.nav-links {
@@ -126,10 +122,6 @@
 	@media (max-width: 480px) {
 		.navbar {
 			padding: 16px 20px;
-		}
-
-		.brand-monogram {
-			font-size: 19px;
 		}
 
 		.nav-links {

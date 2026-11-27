@@ -129,7 +129,7 @@
 
 	.logonya {
 		display: flex;
-		gap: 48px;
+		gap: 14px;
 		margin-bottom: 42px;
 		justify-content: center;
 		align-items: flex-start;
@@ -141,7 +141,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 12px;
-		width: 100px;
+		width: 156px;
 	}
 
 	.icon-link a {
@@ -158,9 +158,10 @@
 
 	.icon-label {
 		font-family: var(--font-tech);
-		font-size: 13px;
+		font-size: 12px;
 		font-weight: 600;
 		color: var(--color-primary);
+		white-space: nowrap;
 	}
 
 	.icon-link :global(svg) {
@@ -223,7 +224,15 @@
 		}
 
 		.logonya {
-			gap: 36px;
+			gap: 14px;
+		}
+
+		.icon-link {
+			width: 150px;
+		}
+
+		.icon-label {
+			font-size: 11.5px;
 		}
 
 		.icon-link :global(svg) {
